@@ -245,7 +245,7 @@ XLSX.prototype = {
     var promises = [];
     var stream = new ZipStream.ZipReader({
       getEntryType: function getEntryType(path) {
-        return path.match(/xl\/media\//) ? 'nodebuffer' : 'string';
+        return path.match(/xl\/media\//) ? 'uint8array' : 'string';
       }
     });
     stream.on('entry', function (entry) {

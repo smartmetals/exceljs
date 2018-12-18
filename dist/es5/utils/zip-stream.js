@@ -123,7 +123,7 @@ utils.inherits(ZipWriter, events.EventEmitter, {
     var _this4 = this;
 
     var options = {
-      type: 'nodebuffer',
+      type: 'uint8array',
       compression: 'DEFLATE'
     };
     return this.zip.generateAsync(options).then(function (content) {
